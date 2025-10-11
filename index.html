@@ -135,7 +135,7 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
   <div id="main-content" style="display:none;">
     <h1>🎉 İyi ki Doğdun Yagmurum! 🎂</h1>
 
-        <iframe id="bg-music" width="0" height="0" style="display:none;" allow="autoplay" src=""></iframe>
+    <iframe id="bg-music" width="0" height="0" style="display:none;" allow="autoplay"></iframe>
 
     <div class="gallery">
       <img src="foto1.jpg" alt="foto1">
@@ -149,11 +149,11 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
       <img src="foto9.jpg" alt="foto9">
     </div>
 
-        <div class="lightbox" id="lightbox">
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
       <button class="close-btn" onclick="closeLightbox()">✖️</button>
       <button class="nav-btn left" onclick="prevImage()">⬅️</button>
       <img id="lightbox-img" src="">
-      <button class="nav-btn right" onclick="nextImage()">➡️</button>
       <button class="nav-btn right" onclick="nextImage()">➡️</button>
     </div>
 
@@ -161,30 +161,12 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
       <div class="celebrate-text">En İyi Şekilde Ben Kutladım Demi Yagmuşumm</div>
     </div>
 
-    <div class="iban-box">
-      <div class="iban-label">Eskiden kalma bir hatıra 😉</div>
-      <div class="iban-text">TR00 0000 0000 0000 0000 0000 00</div>
-      <div class="alici-text">Alıcı: Yağmur</div>
-      <button class="copy-btn">IBAN Kopyala 📋</button>
-    </div>
-        <div class="messages-section">
-      <h2>❤️ Dilek ve Mesajlarını Bırak!</h2>
-      <input type="text" id="name" placeholder="Adın">
-      <textarea id="message" rows="3" placeholder="Doğum günü mesajın..."></textarea>
-      <button class="copy-btn" onclick="addMessage()">GÖNDER</button>
-
-      <h3>Gelen Mesajlar:</h3>
-      <div id="messages">
-              </div>
-    </div>
-        <footer>💖 Sevgilerle, Cemre</footer>
+    <footer>💖 Sevgilerle, Cemre</footer>
   </div>
 
   <script>
     const images = Array.from(document.querySelectorAll('.gallery img'));
     let currentIndex = 0;
-    // MÜZİK URL'si buraya tanımlandı
-    const MUSIC_URL = "https://www.youtube.com/embed/d7O-JQaVLUo?autoplay=1&controls=0&loop=1&playlist=d7O-JQaVLUo";
 
     images.forEach((img, i) => {
       img.addEventListener('click', () => openLightbox(i));
@@ -218,9 +200,8 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
         document.getElementById("password-screen").style.display = "none";
         document.getElementById("main-content").style.display = "block";
         loadMessages();
-        // MÜZİK DÜZELTME: Şifre doğruysa müziği başlat!
-        const iframe = document.getElementById("bg-music");
-        iframe.src = MUSIC_URL; 
+        const iframe = document.getElementById("bg-music");
+        iframe.src = "";
       } else {
         alert("❌ Yanlış şifre!");
       }
@@ -270,3 +251,8 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
   </script>
 </body>
 </html>
+
+
+
+
+ bunun gibi
