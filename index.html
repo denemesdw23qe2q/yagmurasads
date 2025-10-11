@@ -160,14 +160,13 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
       <div class="celebrate-text">En İyi Şekilde Ben Kutladım Demi Yagmuşumm</div>
     </div>
 
-        <div class="iban-box">
+    <div class="iban-box">
       <div class="iban-label">Eskiden kalma bir hatıra 😉</div>
       <div class="iban-text">TR00 0000 0000 0000 0000 0000 00</div>
       <div class="alici-text">Alıcı: Yağmur</div>
       <button class="copy-btn">IBAN Kopyala 📋</button>
     </div>
-
-        <div class="messages-section">
+        <div class="messages-section">
       <h2>❤️ Dilek ve Mesajlarını Bırak!</h2>
       <input type="text" id="name" placeholder="Adın">
       <textarea id="message" rows="3" placeholder="Doğum günü mesajın..."></textarea>
@@ -183,7 +182,7 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
   <script>
     const images = Array.from(document.querySelectorAll('.gallery img'));
     let currentIndex = 0;
-    // Şarkı linki buraya sabit olarak tanımlandı
+    // MÜZİK URL'si buraya tanımlandı
     const MUSIC_URL = "https://www.youtube.com/embed/d7O-JQaVLUo?autoplay=1&controls=0&loop=1&playlist=d7O-JQaVLUo";
 
     images.forEach((img, i) => {
@@ -218,16 +217,13 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
         document.getElementById("password-screen").style.display = "none";
         document.getElementById("main-content").style.display = "block";
         loadMessages();
-        // Müzik: Şifre doğru girildikten sonra müziği başlat
+        // MÜZİK DÜZELTME: Şifre doğruysa müziği başlat!
         const iframe = document.getElementById("bg-music");
         iframe.src = MUSIC_URL; 
       } else {
         alert("❌ Yanlış şifre!");
       }
     }
-
-    // Diğer fonksiyonlar (addMessage, loadMessages, escapeHtml) sunucu bağlantısı gerektirdiği için 
-    // çalışmayabilir, ancak kodun yapısı gereği olduğu gibi bırakılmıştır.
 
     async function addMessage() {
       const name = document.getElementById("name").value.trim();
