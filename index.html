@@ -129,7 +129,7 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
     <p>Şifreyi gir:</p>
     <input type="password" id="pass" placeholder="Şifre">
     <button onclick="checkPass()">GİRİŞ</button>
-    <p id="hint">İpucu: En Sevdigimiz Mekan</p>
+    <p id="hint">İpucu: En Sevdigimiz Mekan Baş Harfi Büyük</p>
   </div>
 
   <div id="main-content" style="display:none;">
@@ -192,7 +192,7 @@ background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
 
     function checkPass() {
       const pass = document.getElementById("pass").value;
-      if (pass === "affil") {
+      if (pass === "Afilli") {
         document.getElementById("password-screen").style.display = "none";
         document.getElementById("main-content").style.display = "block";
         loadMessages();
